@@ -1,0 +1,9 @@
+CC = cc -Wall
+
+demo: mcurses.o demo.o
+
+clean:
+	rm -f mcurses.o demo.o demo
+
+demo.o: demo.c mcurses.h mcurses-config.h
+mcurses.o: mcurses.c mcurses.h mcurses-config.h
